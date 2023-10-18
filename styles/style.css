@@ -1,0 +1,612 @@
+:root {
+  --fonte: "Montserrat", 'Krona One', 'Open Sans', sans-serif;
+  --gradiente: linear-gradient(180deg, #E8F5C8 0%, rgb(255, 255, 255) 40%);
+  --verde-claro: #E8F5C8;
+  --azul-escuro: #4E75FF;
+  --lilas-claro: #85A0FF;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--fonte);
+}
+
+/* Header */
+
+.cabecalho {
+  background: var(--verde-claro);
+}
+
+.cabecalho .cabecalho__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+  margin: 40px 1rem;
+  white-space: nowrap;
+}
+
+.cabecalho__nav--logo {
+  width: 172px;
+  height: 56px;
+}
+
+.cabecalho__nav--lista {
+  font-size: 15px;
+}
+
+.cabecalho .cabecalho__nav .cabecalho__nav--line {
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+.cabecalho .cabecalho__nav .cabecalho__nav--lista {
+  display: inline-flex;
+  list-style: none;
+}
+
+.cabecalho .cabecalho__nav .cabecalho__nav--lista a {
+  color: #0C0421;
+  margin: 0 1.3rem;
+  text-decoration: none;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.cabecalho .cabecalho__nav .cabecalho__nav--lista a:hover {
+  font-weight: 600;
+  transition: .5s;
+}
+
+/* container */
+
+.container {
+  background: var(--gradiente);
+}
+
+.container__primeiro {
+  padding: 64px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 1.5rem;
+}
+
+.container__primeiro--texto h1 {
+  font-family: Krona One;
+  font-size: 31px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  padding-bottom: 2rem;
+}
+
+.container__primeiro--texto h1 span {
+  color: var(--azul-escuro);
+}
+
+.container__primeiro--texto-botao {
+  width: 318px;
+  height: 66px;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 66px;
+  background: var(--azul-escuro);
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.container__primeiro--texto-botao:hover {
+background: var(--lilas-claro);
+transition: .5s;
+}
+
+.container__primeiro--imagem {
+  width: 297px;
+  height: 384px;
+  align-self: end;
+}
+
+/* width < 600px / width >= 600px refazer dessa forma depois */
+/* 360 mobile 768 tablet 1440 desktop */
+@media screen and (min-width: 768px) { /* Tablet */ 
+
+  .cabecalho__nav--logo {
+    width: 270px;
+    height: 88px;
+  }
+
+  .cabecalho__nav--lista {
+    font-size: 22px;
+  }
+
+  /* .container {
+  } */
+
+  .container__primeiro {
+    align-items: center;
+    text-align: start;
+    padding: 0 60px;
+  }
+
+  .container__primeiro--texto {
+    width: 486px;
+  }
+
+  .container__primeiro--texto h1 {
+    font-size: 42px;
+  }
+
+  
+  .container__primeiro--texto-botao {
+    width: 280px;
+  }
+
+  .container__primeiro--imagem {
+    width: 432px;
+    height: 558px;
+    align-self: center;
+  }
+
+}
+
+@media screen and (min-width: 1440px) { /* Desktop */
+
+  /* .container {
+  } */
+
+  .container__primeiro {
+    flex-direction: row;
+    padding: 0 220px;
+  }
+
+  .container__primeiro--imagem {
+    width: 474px;
+  }
+
+}
+
+/* JavaScript */
+
+/* Contato */
+#contato {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 3rem 0;
+  flex-wrap: wrap;
+}
+
+.imgs-contato {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  max-width: 100%;
+  width: 1200px;
+}
+
+.textos {
+  background: linear-gradient(180deg, #E8F5C8 0%, rgb(255, 255, 255) 96%);
+  padding: 2rem;
+  margin-top: 16px;
+  border-radius: 34px;
+  max-width: 100%;
+  width: 1200px;
+  display: grid;
+  justify-content: center;
+}
+
+.textos .titulo {
+  font-family: "Krona One", sans-serif;
+  font-size: 26px;
+  color: var(--azul-escuro);
+  display: flex;
+  justify-content: center;
+}
+
+.textos .infos {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  color: #0C0421;
+  line-height: 2rem;
+  margin: 2rem 0;
+}
+
+.textos .btn-contato {
+  width: 60%;
+  margin: 0 20%;
+  height: 45px;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  background: var(--azul-escuro);
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.btn-contato:hover{
+  background: var(--lilas-claro);
+  transition: .5s;
+}
+
+/* Modal do formulário de contato */
+.modal{
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* Ocultar a janela modal */
+  display: none;
+}
+
+.conteudo-modal{
+  margin: 0 auto;
+  margin-top: 3%;
+  max-width: 800px;
+  background: linear-gradient(180deg, #E8F5C8 0%, rgb(255, 255, 255) 96%);
+  padding: 40px 48px;
+  border-radius: 8px;
+}
+
+.cabecalho-modal{
+  padding: 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.cabecalho-modal .cabecalho-titulo-modal{
+  
+  font-family: "Krona One", sans-serif;
+  font-size: 26px;
+  color: var(--azul-escuro);
+  margin: 10px 0;
+}
+
+.cabecalho-modal .cabecalho-modal-fechar{
+  border: solid 1px;
+  font-weight: bold;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.cabecalho-modal .cabecalho-modal-fechar:hover{
+  background: red;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.inputs-modal {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.inputs-modal .paragrafo-modal {
+  margin: 10px 0;
+  color: #0C0421;
+  font-size: 22px;
+}
+
+.inputs-modal label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #0C0421;
+  font-weight: bold;
+}
+
+.inputs-modal input,
+.inputs-modal textarea {
+  border-radius: 25px;
+  padding: 1rem;
+  border: none;
+}
+
+.inputs-modal textarea {
+  height: 70px;
+}
+
+.rodape-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 105px;
+}
+
+.btn-enviar {
+  width: 100%;
+  border: none;
+  border-radius: 40px;
+  padding: 24px;
+  gap: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  background: var(--azul-escuro);
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.btn-enviar:hover {
+    background: var(--lilas-claro);
+    transition: .5s;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+#nosso-espaco {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#nosso-espaco .details-inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#nosso-espaco .details-inner img {
+  height: 320px;
+  margin: 1rem;
+}
+
+#nosso-espaco .details-inner .espaco-textos {
+  padding: 1rem;
+  max-width: 700px;
+}
+
+#nosso-espaco .details-inner .espaco-textos .title {
+  font-family: "Krona One", sans-serif;
+  font-size: 31px;
+  color: var(--azul-escuro);
+}
+
+#nosso-espaco .details-inner .espaco-textos .infos {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  color: #0C0421;
+  margin: 1rem 0;
+}
+
+#nosso-espaco .details-inner .espaco-textos object {
+  width: 100%;
+}
+
+#servico {
+  background: linear-gradient(180deg, #E8F5C8 0%, rgb(255, 255, 255) 96%);
+  padding: 5rem;
+}
+
+#servico .cards {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#servico .cards .card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(202, 212, 250, 0.3) 100%);
+  max-width: 352px;
+  height: 475px;
+  padding: 1.2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1rem;
+  border-radius: 32px;
+  border: 1px solid #fff;
+}
+
+#servico .cards .card .title {
+  font-family: "Krona One", sans-serif;
+  font-size: 22px;
+  color: #0C0421;
+  text-align: center;
+}
+
+#servico .cards .card .text-details {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #0C0421;
+}
+
+#descontos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#descontos .form-inscricao {
+  text-align: center;
+}
+
+#descontos .form-inscricao .title {
+  font-family: "Krona One", sans-serif;
+  font-size: 30px;
+  color: #0C0421;
+  margin: 1rem 0;
+}
+
+#descontos .form-inscricao p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  color: #0C0421;
+  margin: 1rem 0;
+}
+
+#descontos .form-inscricao .input-btn {
+  width: 790px;
+  height: 65px;
+  border-radius: 65px;
+  border: 1px solid var(--azul-escuro);
+  margin: 0 auto;
+  display: inline-flex;
+}
+
+#descontos .form-inscricao .input-btn input {
+  border: none;
+  outline: none;
+  width: 65%;
+  margin-left: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  color: #0C0421;
+}
+
+#descontos .form-inscricao .input-btn button {
+  width: 35%;
+  color: white;
+  background: var(--azul-escuro);
+  border-radius: 0 65px 65px 0;
+  border: none;
+  font-size: 18px;
+}
+
+#contatos {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 0;
+}
+
+#contatos .imgs-contatos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}
+
+#contatos .imgs-contatos img:nth-child(1) {
+  grid-area: 1/1/2/3;
+}
+
+#contatos .imgs-contatos img:nth-child(2) {
+  grid-area: 2/1/3/2;
+}
+
+#contatos .imgs-contatos img:nth-child(3) {
+  grid-area: 2/2/3/3;
+}
+
+#contatos .form-contato {
+  background: linear-gradient(180deg, #E8F5C8 0%, rgb(255, 255, 255) 96%);
+  padding: 2rem;
+  border-radius: 34px;
+  max-width: 560px;
+  display: grid;
+  align-content: space-between;
+}
+
+#contatos .form-contato .title {
+  font-family: "Krona One", sans-serif;
+  font-size: 26px;
+  color: var(--azul-escuro);
+}
+
+#contatos .form-contato .infos {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  color: #0C0421;
+  line-height: 2rem;
+  margin: 2rem 0;
+}
+
+#contatos .form-contato .inputs {
+  display: grid;
+  gap: 0.5rem;
+}
+
+#contatos .form-contato .inputs label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #0C0421;
+  font-weight: bold;
+}
+
+#contatos .form-contato .inputs input,
+#contatos .form-contato .inputs textarea {
+  border-radius: 25px;
+  padding: 1rem;
+  border: none;
+}
+
+#contatos .form-contato .inputs textarea {
+  height: 70px;
+}
+
+#contatos .form-contato button {
+  height: 45px;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  background: var(--azul-escuro);
+}
+
+footer {
+  background: #E8F5C8;
+  padding: 2rem;
+  text-align: center;
+}
+ */
