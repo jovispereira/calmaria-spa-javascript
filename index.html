@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="shortcut icon" href="./assets/assets-figma/Desktop/Favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/container--primeiro.css">
+    <link rel="stylesheet" href="./styles/container--secao.css">
+    <link rel="stylesheet" href="./styles/container--cards.css">
+    <link rel="stylesheet" href="./styles/container--inscricao.css">
+    <link rel="stylesheet" href="./styles//container--contato.css">
+    <link rel="shortcut icon" href="./assets/Desktop/Favicon.svg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -29,39 +34,94 @@
 
     <main class="container">
 
-    <section class="container__primeiro">
-        <div class="container__primeiro--texto">
-            <h1>Boas-vindas ao seu refúgio de <span>paz e bem-estar</span></h1>
-            <button class="container__primeiro--texto-botao">Quero relaxar</button>
-        </div>
-        <img class="container__primeiro--imagem" src="./assets/home-image.png" alt="">
-
-    </section>
-
-    <section id="nosso-espaco">
-        <div class="details-inner">
-            <img src="./assets/espaco-1.png" alt="">
-            <div class="espaco-textos">
-                <p class="title">Tecnologia e natureza potencializando seu relaxamento</p>
-                <p class="infos">Oferecemos equipamentos de ponta, produtos certificados e uma equipe de
-                    profissionais ultra qualificados para dissipar seu estresse e ajudar você na busca por
-                    equilíbrio e tranquilidade.</p>
-                <object data="./assets/separador-direita.svg" type="image/svg+xml"></object>
+        <section class="container__primeiro">
+            <div class="container__primeiro--texto">
+                <h1>Boas-vindas ao seu refúgio de <span>paz e bem-estar</span></h1>
+                <button class="container__primeiro--texto-botao">Quero relaxar</button>
             </div>
-        </div>
-        <div class="details-inner">
-            <div class="espaco-textos">
-                <p class="title">Elevando seu bem-estar a um novo patamar</p>
-                <p class="infos">No Calmaria Spa cada visita é uma jornada revigorante para mais serenidade e
-                    disposição! Independente da sua rotina, vamos ajudar você a encontrar seu paraíso
-                    particular.</p>
-                <object data="./assets/separador-esquerda.svg" type="image/svg+xml"></object>
+            <img class="container__primeiro--imagem" src="./assets/home-image.png" alt="Mulher recebendo massagem.">
+
+        </section>
+
+        <section class="container__secao">
+            <div class="container__secao--conteudo">
+                <img class="container__secao--conteudo--img1" src="./assets/espaco-1.png"
+                    alt="Ambiente da Calmaria Spa com plantas e teto solar redondo.">
+                <div class="container__secao--conteudo--textos">
+                    <h2 class="container__secao--conteudo--textos-titulo">Tecnologia e natureza potencializando seu
+                        relaxamento</h2>
+                    <p class="container__secao--conteudo--textos-infos">Oferecemos equipamentos de ponta, produtos
+                        certificados e uma equipe de
+                        profissionais ultra qualificados para dissipar seu estresse e ajudar você na busca por
+                        equilíbrio e tranquilidade.</p>
+                    <object aria-hidden="true" data="./assets/separador-direita.svg" type="image/svg+xml"></object>
+                </div>
             </div>
-            <img src="./assets/espaco-2.png" alt="">
-            <img src="./assets/espaco-3.png" alt="">
-        </div>
-    </section>
-    <section id="servico"> 
+            <div class="container__secao--conteudo">
+                <div class="container__secao--conteudo--textos">
+                    <h2 class="container__secao--conteudo--textos-titulo">Elevando seu bem-estar a um novo patamar</h2>
+                    <p class="container__secao--conteudo--textos-infos">No Calmaria Spa cada visita é uma jornada
+                        revigorante para mais serenidade e
+                        disposição! Independente da sua rotina, vamos ajudar você a encontrar seu paraíso
+                        particular.</p>
+                    <object aria-hidden="true" data="./assets/separador-esquerda.svg" type="image/svg+xml"></object>
+                </div>
+                <div>
+                    <img class="container__secao--conteudo--img2" src="./assets/espaco-2.png"
+                        alt="Mulher de costas em uma banheira segurando uma taça.">
+                    <img class="container__secao--conteudo--img2" src="./assets/espaco-3.png"
+                        alt="Ambiente da Calmaria Spa com poltrona, plantas e uma piscina.">
+                </div>
+            </div>
+        </section>
+
+        <section class="container container__cards">
+            <article class="container__cards--card">
+                <img src="./assets/icon-massagem.png"
+                    alt="Figura de pessoa deitada recebendo massagem de uma pessoa em pé.">
+                <h2 class="container__cards--card-title">Massagens</h2>
+                <img src="./assets/Soft Star.png" alt="">
+                <p class="container__cards--card-texto">Relaxantes, terapêuticas, desportivas e drenagens. Conte com
+                    nossos terapeutas
+                    especializados para aliviar suas tensões, tratar dores e retenção de líquido através
+                    dessa técnica milenar tão eficiente para o organismo humano.</p>
+            </article>
+            <article class="container__cards--card">
+                <img src="./assets/icon-tratamentos.png" alt="Figura de banheira com uma flor">
+                <h2 class="container__cards--card-title">Tratamentos Corporais</h2>
+                <img src="./assets/Soft Star.png" alt="">
+                <p class="container__cards--card-texto">Tratamos sua pele com gentileza através de esfoliações corporais
+                    suaves,
+                    hidratações profundas do corpo e do rosto, além de limpeza facial. Você também pode desfrutar de
+                    banhos revigorantes de sais.</p>
+            </article>
+            <article class="container__cards--card">
+                <img src="./assets/icon-dias-especiais.png" alt="Figura de mesa com vela, flor e produtos de Spa">
+                <h2 class="container__cards--card-title">Dias especiais</h2>
+                <img src="./assets/Soft Star.png" alt="">
+                <p class="container__cards--card-texto">Pacotes cuidadosamente elaborados, desde o "Dia Revitalizante"
+                    com
+                    massagens e tratamentos faciais, até o "Dia Serenidade" com banhos terapêuticos e meditação.
+                    Mime-se com momentos de refúgio de tranquilidade.</p>
+            </article>
+        </section>
+ 
+        <section class="container__incricao">
+            <img class="container__incricao--mobile" src="./assets/Mobile/Imagens/Mandala superior.svg" alt="">
+            <img class="container__incricao--tablet" src="./assets/Tablet/Imagens/Mandala esquerda.svg" alt="">
+            <div class="container__incricao--div">
+                <h4 class="container__incricao--form-titulo">Inscreva-se para ganhar descontos!</h4>
+                <p class="container__incricao--form-texto">Cadastre seu email para receber descontos e novidades sobre o
+                    espaço e nossos serviços.</p>
+                <form class="container__incricao--form-input">
+                    <input type="email">
+                    <button type="submit">Inscrever</button>
+                </form>
+            </div>
+            <img class="container__incricao--mobile" src="./assets/Mobile/Imagens/Mandala Inferior.svg" alt="">
+            <img class="container__incricao--tablet" src="./assets/Tablet/Imagens/Mandala Direita.svg" alt="">
+        
+        </section>
 
     <!-- JavaScript -->
     <section id="contato">
@@ -77,7 +137,7 @@
             <button class="btn-contato" onclick="abrirModal('ver-modal')">Entrar em contato</button>
         </div>
 
-         <!-- Janela modal 'ver-modal'-->
+        <!-- Janela modal 'ver-modal'-->
         <div id="ver-modal" class="modal">
             <div class="conteudo-modal">
                 <div class="cabecalho-modal">
@@ -100,85 +160,29 @@
 
                 <div class="rodape-modal">
                     <!-- Botão para fechar a janela modal 'ver-modal' -->
-                    <button class="btn-enviar" onclick="fecharModal('ver-modal')">Enviar</button>
+                    <button class="btn-enviar" onclick="fecharModal('ver-modal'), abrirModal('ver-modal-enviado')">Enviar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de formulário enviado -->
+
+        <div id="ver-modal-enviado" class="modal-enviado">
+            <div class="conteudo-modal-enviado">
+                <div class="cabecalho-modal-enviado">
+                    <h1 class="cabecalho-titulo-modal-enviado">Mensagem enviada com sucesso!</h1>
+                    <img class ="cabecalho-icone-modal-enviado" src="./assets/icon-enviado.png" alt="">
+                    <!-- Chamar a função para fechar a janela modal 'ver-modal' -->
+                    <button class="btn-fechar" onclick="fecharModal('ver-modal-enviado')">Fechar</button>
                 </div>
             </div>
         </div>
     </section>
-
-        <!-- <div class="container"> -->
-        <!-- <div class="cards">
-            <div class="card">
-                <img src="./assets/icon-massagem.png" alt="">
-                <p class="title">Massagens</p>
-                <img src="./assets/Soft Star.png" alt="">
-                <div class="text-details">Relaxantes, terapêuticas, desportivas e drenagens. Conte com nossos terapeutas
-                    especializados para aliviar suas tensões, tratar dores e retenção de líquido através
-                    dessa técnica milenar tão eficiente para o organismo humano.</div>
-            </div>
-            <div class="card">
-                <img src="./assets/icon-tratamentos.png" alt="">
-                <p class="title">Tratamentos Corporais</p>
-                <img src="./assets/Soft Star.png" alt="">
-                <div class="text-details">Tratamos sua pele com gentileza através de esfoliações corporais suaves,
-                    hidratações profundas do corpo e do rosto, além de limpeza facial. Você também pode desfrutar de
-                    banhos revigorantes de sais.</div>
-            </div>
-            <div class="card">
-                <img src="./assets/icon-dias-especiais.png" alt="">
-                <p class="title">Dias especiais</p>
-                <img src="./assets/Soft Star.png" alt="">
-                <div class="text-details">Pacotes cuidadosamente elaborados, desde o "Dia Revitalizante" com
-                    massagens e tratamentos faciais, até o "Dia Serenidade" com banhos terapêuticos e meditação.
-                    Mime-se com momentos de refúgio de tranquilidade.</div>
-            </div>
-        </div> -->
-        <!-- </div> -->
-    <!-- </section>
-    <section class="esconder" id="desconto">
-        <img src="./assets/mandala-esquerda.png" alt="">
-        <div class="form-inscricao">
-            <h4 class="title">Inscreva-se para ganhar descontos!</h4>
-            <p>Cadastre seu email para receber descontos e novidades sobre o espaço e nossos serviços.</p>
-            <div class="input-btn">
-                <input type="email">
-                <button type="submit">Inscrever</button>
-            </div>
-        </div>
-        <img src="./assets/mandala-direita.png" alt="">
-    </section> -->
-    <!-- <section class="esconder" id="contatos">
-        <div class="imgs-contatos esconder">
-            <img src="./assets/contato-img-1.png" alt="">
-            <img src="./assets/contato-img-2.png" alt="">
-            <img src="./assets/contato-img-3.png" alt="">
-        </div>
-        <div class="form-contato esconder">
-            <div class="texts">
-                <p class="title">Entre em contato</p>
-                <p class="infos">Reserve seu horário, tire dúvidas ou proponha sugestões, nosso canal é aberto para
-                    você!</p>
-            </div>
-            <div class="inputs ">
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" placeholder="Digite seu nome completo">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Digite seu e-mail">
-                <label for="telefone">Telefone</label>
-                <input type="text" id="telefone" placeholder="(XX) XXXXX-XXXX">
-                <label for="mensagem">Mensagem</label>
-                <textarea type="text" id="mensagem" placeholder="Escreva sua mensagem"></textarea>
-            </div>
-            <button>Enviar</button>
-        </div>
-    </section> -->
-</main>
-    <!-- <footer>
+    </main>
+    <footer>
         <small>Desenvolvido por Alura. Projeto fictício sem fins comerciais.</small>
-    </footer> -->
-
+    </footer>
     <script type="text/javascript" src="main.js"></script>
-
 </body>
 
 </html>

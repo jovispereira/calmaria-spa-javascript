@@ -2,8 +2,6 @@ const btnContato = document.querySelector(".btn-contato")
 
 // Função para carregar a janela modal
 function abrirModal(carregarModal) {
-    //console.log("Carregar a janela modal: " + carregarModal);
-
     // Receber o seletor da janela modal que será aberta
     let modal = document.getElementById(carregarModal);
 
@@ -16,8 +14,6 @@ function abrirModal(carregarModal) {
 
 // Função para fechar a janela modal
 function fecharModal(fecharModal){
-    //console.log("Fechar a janela modal: " + fecharModal);
-
     // Receber o seletor da janela modal que será fechada
     let modal = document.getElementById(fecharModal);
 
@@ -27,3 +23,5 @@ function fecharModal(fecharModal){
     // Apresentar barra de rolagem
     document.body.style.overflow = 'auto';
 }
+
+
