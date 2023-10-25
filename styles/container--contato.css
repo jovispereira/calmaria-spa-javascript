@@ -141,6 +141,25 @@
   .inputs-modal textarea {
     height: 70px;
   }
+
+  .inputs-modal-radio {
+    display: flex;
+    margin: 8px 16px;
+    gap: 32px;
+}
+
+  .field-legend {
+    border: none;
+    font-weight: bold;
+}
+
+  .inputs-modal-label {
+    font-weight: normal !important;
+}
+
+  .inputs-modal-radio > div {
+    white-space: nowrap;
+}
   
   .rodape-modal {
     display: flex;
@@ -150,6 +169,7 @@
   }
   
   .btn-enviar {
+    font-family: "Montserrat", sans-serif;
     width: 80%;
     border: none;
     border-radius: 40px;
@@ -166,8 +186,7 @@
       background: var(--lilas-claro);
       transition: .5s;
     }
-  
-  
+
     /* Modal de formulário enviado */
   
   .modal-enviado{
@@ -210,6 +229,7 @@
   }
   
   .btn-fechar{
+    font-family: "Montserrat", sans-serif;
     width: 40%;
     border: none;
     border-radius: 40px;
@@ -226,6 +246,82 @@
     background: var(--lilas-claro);
     transition: .5s;
   }
+
+  /* Modal dialog popup */
+
+  .modal-popup {
+    display: none;
+    margin: auto;
+    background: linear-gradient(180deg, #E8F5C8 0%, rgb(255, 255, 255) 96%);
+    padding: 0 48px;
+    border-radius: 8px;
+    max-width: 80%;
+    width: 793px;
+    height: 417px;
+}
+
+  .modal-popup-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 54px;
+}
+
+  .modal-popup-conteudo img {
+    transform: rotate(90deg);
+    width: 114px;
+    height: 200px;
+}
+
+  .modal-popup-conteudo-cabecalho {
+      font-family: "Krona One", sans-serif;
+      font-size: 26px;
+      font-weight: 400;
+      margin: 0 0 10px 0;
+ }
+
+  .modal-popup-conteudo-cadastro {
+    margin-top: 16px;
+ }
+
+ .modal-popup-conteudo-cadastro-btn {
+    display: flex;
+    align-items: center;
+ }
+
+ .modal-popup-conteudo-cadastro-btn input {
+  flex: 1;
+  border-top-left-radius: 32px;
+  border-bottom-left-radius: 32px;
+  border: 1px solid #4E75FF;
+  padding: 10px 64px;
+  border-right: none;
+}
+
+  .modal-popup-conteudo-cadastro-btn button {
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+    border: none;
+    padding: 10px 64px;
+    background-color: var(--azul-escuro);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+  .modal-popup-conteudo-cadastro-btn button:hover {
+    background: var(--lilas-claro);
+    transition: .5s;
+}
+
+dialog::backdrop {
+  background-color: rgb(93, 88, 108, 0.8);
+}
+
+/* Footer */
 
   footer {
     background: #E8F5C8;
