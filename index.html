@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <header class="cabecalho">
+    <header class="cabecalho" aria-hidden='true'>
         <nav class="cabecalho__nav">
             <img class="cabecalho__nav--logo" src="./assets/logo.png" alt="Logo da Calmaria Spa">
             <span class="cabecalho__nav--line"></span>
@@ -32,7 +32,7 @@
         </nav>
     </header>
 
-    <main class="container">
+    <main class="container" aria-hidden='true'>
 
         <section class="container__primeiro">
             <div class="container__primeiro--texto">
@@ -122,116 +122,116 @@
             <img class="container__incricao--tablet" src="./assets/Tablet/Imagens/Mandala Direita.svg" alt="">
         
         </section>
+    </main>
 
-    <!-- JavaScript -->
-    <section id="contato" role="region" aria-label="Seção de Contato">
-        <div class="imgs-contato">
-            <img src="./assets/contato-img-1.png" alt="">
-            <img src="./assets/contato-img-2.png" alt="">
-            <img src="./assets/contato-img-3.png" alt="">
-        </div>
+        <!-- JavaScript -->
+        <section id="contato" role="region" aria-label="Seção de Contato">
+            <div class="imgs-contato">
+                <img src="./assets/contato-img-1.png" alt="">
+                <img src="./assets/contato-img-2.png" alt="">
+                <img src="./assets/contato-img-3.png" alt="">
+            </div>
+        
+            <div class="textos">
+                <h2 class="titulo">Converse com a gente!</h2>
+                <p class="infos">Reserve seu horário, tire dúvidas e proponha sugestões!</p>
+                <button class="btn-contato" onclick="abrirModal('ver-modal')" role="button" aria-label="Clique para Entrar em contato">Entrar em contato</button>
+            </div>
     
-        <div class="textos">
-            <h2 class="titulo">Converse com a gente!</h2>
-            <p class="infos">Reserve seu horário, tire dúvidas e proponha sugestões!</p>
-            <button class="btn-contato" onclick="abrirModal('ver-modal')" role="button" aria-label="Clique para Entrar em contato">Entrar em contato</button>
-        </div>
-
-        <!-- Janela modal 'ver-modal' -->
-        <div id="ver-modal" class="modal" role="dialog" aria-labelledby="cabecalho-titulo-modal" aria-modal="true">
-            <div class="conteudo-modal">
-                <div class="cabecalho-modal">
-                    <h1 id="cabecalho-titulo-modal" class="cabecalho-titulo-modal">Preencha seus dados:</h1>
-                    <!-- Botão para fechar a janela modal 'ver-modal' -->
-                    <button class="cabecalho-modal-fechar" onclick="fecharModal('ver-modal')" aria-label="Fechar formulário" tabindex="0">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-
-                <div class="inputs-modal">
-                    <p class="paragrafo-modal">Quer marcar horário, enviar críticas ou sugestões? Preencha os campos abaixo e deixe sua mensagem, que retornaremos em até 12h!</p>
-
-                    <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome" required placeholder="Digite seu nome completo" aria-describedby="instrucoes-nome">
-
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" required placeholder="Digite seu e-mail" aria-describedby="instrucoes-email">
-
-                    <label for="telefone">Telefone</label>
-                    <input type="tel" name="telefone" id="telefone" required placeholder="(DDD) XXXXX-XXXX" aria-describedby="instrucoes-telefone">
-
-                    <label for="mensagem">Mensagem</label>
-                    <textarea id="mensagem" name="mensagem" required placeholder="Escreva sua mensagem" aria-describedby="instrucoes-mensagem"></textarea>
-
-                    <fieldset class="field-legend" aria-labelledby="tituloContato">
-                        <legend>Prefere contato por:</legend>
-                        <div class="inputs-modal-radio">
-                            <div>
-                                <input id="ligacao" type="radio" name="contato" required value="Ligação" role="radio" aria-labelledby="ligacao-label">
-                                <label class="inputs-modal-label" id="ligacao-label" for="ligacao">Ligação</label>
+            <!-- Janela modal 'ver-modal' -->
+            <div id="ver-modal" class="modal" role="dialog" aria-labelledby="cabecalho-titulo-modal" aria-modal="true">
+                <div class="conteudo-modal">
+                    <div class="cabecalho-modal">
+                        <h2 id="cabecalho-titulo-modal" class="cabecalho-titulo-modal">Preencha seus dados:</h2>
+                        <!-- Botão para fechar a janela modal 'ver-modal' -->
+                        <button class="cabecalho-modal-fechar" onclick="fecharModal('ver-modal')" aria-label="Botão para fechar o formulário" tabindex="0">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+    
+                    <div class="inputs-modal">
+                        <p class="paragrafo-modal">Quer marcar horário, enviar críticas ou sugestões? Preencha os campos abaixo e deixe sua mensagem, que retornaremos em até 12h!</p>
+    
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" required placeholder="Digite seu nome completo" aria-describedby="instrucoes-nome">
+    
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required placeholder="Digite seu e-mail" aria-describedby="instrucoes-email">
+    
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" name="telefone" id="telefone" required placeholder="(DDD) XXXXX-XXXX" aria-describedby="instrucoes-telefone">
+    
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" required placeholder="Escreva sua mensagem" aria-describedby="instrucoes-mensagem"></textarea>
+    
+                        <fieldset class="field-legend" aria-labelledby="tituloContato">
+                            <legend>Prefere contato por:</legend>
+                            <div class="inputs-modal-radio">
+                                <div>
+                                    <input id="ligacao" type="radio" name="contato" required value="Ligação" role="radio" aria-labelledby="ligacao-label">
+                                    <label class="inputs-modal-label" id="ligacao-label" for="ligacao">Ligação</label>
+                                </div>
+                                <div>
+                                    <input id="whatsapp" type="radio" name="contato" required value="Whatsapp" role="radio" aria-labelledby="whatsapp-label">
+                                    <label class="inputs-modal-label" id="whatsapp-label" for="whatsapp">WhatsApp</label>
+                                </div>
+                                <div>
+                                    <input id="email-contato" type="radio" name="contato" required value="Email" role="radio" aria-labelledby="email-contato-label">
+                                    <label class="inputs-modal-label" id="email-contato-label" for="email-contato">Email</label>
+                                </div>
                             </div>
-                            <div>
-                                <input id="whatsapp" type="radio" name="contato" required value="Whatsapp" role="radio" aria-labelledby="whatsapp-label">
-                                <label class="inputs-modal-label" id="whatsapp-label" for="whatsapp">WhatsApp</label>
-                            </div>
-                            <div>
-                                <input id="email-contato" type="radio" name="contato" required value="Email" role="radio" aria-labelledby="email-contato-label">
-                                <label class="inputs-modal-label" id="email-contato-label" for="email-contato">Email</label>
-                            </div>
-                        </div>
-                    </fieldset>
-                </div>
-
-                <div class="rodape-modal">
-                    <!-- Botão para fechar a janela modal 'ver-modal' -->
-                    <button class="btn-enviar" onclick="fecharModal('ver-modal'), abrirModal('ver-modal-enviado')" tabindex="0">Enviar</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal de formulário enviado -->
-        <div id="ver-modal-enviado" class="modal-enviado" role="dialog" aria-labelledby="cabecalho-titulo-modal-enviado" aria-modal="true">
-            <div class="conteudo-modal-enviado">
-                <div class="cabecalho-modal-enviado">
-                    <h1 id="cabecalho-titulo-modal-enviado" class="cabecalho-titulo-modal-enviado">Mensagem enviada com sucesso!</h1>
-                    <img class="cabecalho-icone-modal-enviado" src="./assets/icon-enviado.png" alt="">
-                    <!-- Botão para fechar a janela modal 'ver-modal-enviado' -->
-                    <button class="btn-fechar" onclick="fecharModal('ver-modal-enviado')" tabindex="0" aria-label="Fechar formulário enviado">Fechar</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal popup dialog -->
-        <dialog class="modal-popup" id="modal-popup">
-            <div class="modal-popup-conteudo">
-                <img src="./assets/mandala-esquerda.png" alt="">
-                <h1 class="modal-popup-conteudo-cabecalho">Cadastre-se em nossa newsletter para receber descontos e novidades sobre nossos serviços!</h1>
-                <p>Cadastre seu e-mail:</p>
-                <div class="modal-popup-conteudo-cadastro">
-                    <div class="modal-popup-conteudo-cadastro-btn">
-                        <label for="email"></label>
-                        <input type="email" id="email" placeholder="" aria-describedby="instrucoes-email-popup">
-                        <button class="btn-modal-popup" onclick="inscrever()" tabindex="0">Inscrever</button>
+                        </fieldset>
+                    </div>
+    
+                    <div class="rodape-modal">
+                        <!-- Botão para fechar a janela modal 'ver-modal' -->
+                        <button class="btn-enviar" onclick="fecharModal('ver-modal'), abrirModal('ver-modal-enviado')" tabindex="0">Enviar</button>
                     </div>
                 </div>
             </div>
-        </dialog>
-
-        <!-- Modal de popup inscrito -->
-        <div id="ver-modal-inscrito" class="modal-enviado" role="dialog" aria-labelledby="cabecalho-titulo-modal-inscrito" aria-modal="true">
-            <div class="conteudo-modal-enviado">
-                <div class="cabecalho-modal-enviado">
-                    <h1 id="cabecalho-titulo-modal-inscrito" class="cabecalho-titulo-modal-enviado">Inscrito com sucesso!</h1>
-                    <img class="cabecalho-icone-modal-enviado" src="./assets/icon-enviado.png" alt="">
-                    <!-- Botão para fechar a janela modal 'ver-modal-inscrito' -->
-                    <button class="btn-fechar" onclick="fecharModal('ver-modal-inscrito')" tabindex="0" aria-label="Fechar formulário de inscrição">Fechar</button>
+    
+            <!-- Modal de formulário enviado -->
+            <div id="ver-modal-enviado" class="modal-enviado" role="dialog" aria-labelledby="cabecalho-titulo-modal-enviado" aria-modal="true">
+                <div class="conteudo-modal-enviado">
+                    <div class="cabecalho-modal-enviado">
+                        <h1 id="cabecalho-titulo-modal-enviado" class="cabecalho-titulo-modal-enviado">Mensagem enviada com sucesso!</h1>
+                        <img class="cabecalho-icone-modal-enviado" src="./assets/icon-enviado.png" alt="">
+                        <!-- Botão para fechar a janela modal 'ver-modal-enviado' -->
+                        <button class="btn-fechar" onclick="fecharModal('ver-modal-enviado')" tabindex="0" aria-label="Fechar formulário enviado">Fechar</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+    
+            <!-- Modal popup dialog -->
+            <dialog class="modal-popup" id="modal-popup" role="dialog" aria-labelledby="modal-popup-conteudo-cabecalho" aria-modal="true">
+                <div class="modal-popup-conteudo">
+                    <img src="./assets/mandala-esquerda.png" alt="">
+                    <h2 class="modal-popup-conteudo-cabecalho">Cadastre-se em nossa newsletter para receber descontos e novidades sobre nossos serviços!</h2>
+                    <p>Cadastre seu e-mail:</p>
+                    <div class="modal-popup-conteudo-cadastro">
+                        <div class="modal-popup-conteudo-cadastro-btn">
+                            <label for="email"></label>
+                            <input type="email" id="email" placeholder="" aria-describedby="instrucoes-email-popup" autofocus>
+                            <button class="btn-modal-popup" onclick="inscrever()" tabindex="0">Inscrever</button>
+                        </div>
+                    </div>
+                </div>
+            </dialog>
+    
+            <!-- Modal de popup inscrito -->
+            <div id="ver-modal-inscrito" class="modal-inscrito" role="dialog" aria-labelledby="cabecalho-titulo-modal-inscrito" aria-modal="true">
+                <div class="conteudo-modal-inscrito">
+                    <div class="cabecalho-modal-inscrito">
+                        <h1 id="cabecalho-titulo-modal-inscrito" class="cabecalho-titulo-modal-inscrito">Inscrito com sucesso!</h1>
+                        <img class="cabecalho-icone-modal-inscrito" src="./assets/icon-enviado.png" alt="">
+                        <!-- Botão para fechar a janela modal 'ver-modal-inscrito' -->
+                        <button class="btn-fechar" onclick="fecharModal('ver-modal-inscrito')" tabindex="0" aria-label="Fechar formulário de inscrição">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    </main>
-    <footer>
+    <footer aria-hidden='true'>
         <small>Desenvolvido por Alura. Projeto fictício sem fins comerciais.</small>
     </footer>
     <script type="text/javascript" src="main.js"></script>
